@@ -4,7 +4,7 @@
   "description": "JQuery Plugin for Playing Audio Files",
   "repository": {
     "type": "git",
-    "url": "git://www.danieljach.net:GitServer/jquery-audio-player"
+    "url": "git@github.com:DanielJAch/bootstrap-audio-player.git"
   },
   "author": {
     "name": "Daniel Ach",
