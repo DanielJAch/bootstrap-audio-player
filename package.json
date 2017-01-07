@@ -11,12 +11,11 @@
     "email": "danieljach@gmail.com"
   },
   "keywords": [
+    "bootstrap-plugin",
     "jquery-plugin",
     "audio",
-    "video",
-    "media",
     "player",
-    "jplayer"
+    "bootstrap-audio-player"
   ],
   "license": "MIT",
   "main": "dist/jquery.audioPlayer.js",
