@@ -18,14 +18,12 @@
     "bootstrap-audio-player"
   ],
   "license": "MIT",
-  "main": "dist/jquery.audioPlayer.js",
-  "ignore": [
-    "**/.*",
-    "bower_components",
-    "test",
-    "tests"
+  "main": "dist/js/jquery.audioPlayer.js",
+  "files": [
+    "dist"
   ],
   "dependencies": {
-    "jquery": ">=1.7.2"
+    "jquery": ">1.7.0",
+    "bootstrap": "~3.3.7"
   }
 }

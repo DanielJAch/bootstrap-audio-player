@@ -18,7 +18,7 @@
     "bootstrap-audio-player"
   ],
   "license": "MIT",
-  "main": "dist/jquery.audioPlayer.js",
+  "main": "dist/js/jquery.audioPlayer.js",
   "files": [
     "dist"
   ],
