@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>JQuery Audio Player Example</title>
+  <meta name="viewport" content="width=device-width" />
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="../dist/bin/jquery.audioPlayer.js"></script>
+  <script type="text/javascript" src="resources/tracks.js"></script>
+
+  <style type="text/css">
+    #audio-player {
+      margin: auto;
+      width: 500px;
+    }
+
+    .fa {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="audio-player" class="music-player">
+    <ul class="nav nav-pills">
+      <li><a href="#"><i id="previous-button" class="fa fa-backward"></i></a></li>
+      <li><a href="#"><i id="play-button" class="fa fa-play"></i></a></li>
+      <li><a href="#"><i id="next-button" class="fa fa-forward"></i></a></li>
+      <li><a href="#"><i id="random-button" class="fa fa-random"></i></a></li>
+      <li><a href="#"><i id="repeat-button" class="fa fa-repeat"></i></a></li>
+    </ul>
+
+    <div id="now-playing-info">
+
+    </div>
+
+    <audio></audio>
+  </div>
+</body>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  var player = $('#audio-player');
+  var options = {
+    setPageTitleToNowPlaying: true
+  };
+
+  player.audioPlayer(options);
+  player.audioPlayer('setPlaylist', options, playlist);
+
+  $('#play-button').bind('click', function() {
+    player.audioPlayer('togglePlayPause');
+
+    var element = $(this);
+
+    if (element.hasClass('fa-play')) {
+      element.removeClass('fa-play');
+      element.addClass('fa-pause');
+    } else {
+      element.removeClass('fa-pause');
+      element.addClass('fa-play');
+    }
+  });
+
+  $('#previous-button').bind('click', function() { player.audioPlayer('playPrevious'); });
+  $('#next-button').bind('click', function() { player.audioPlayer('playNext'); });
+  $('#random-button').bind('click', function() { player.audioPlayer('toggleRandom'); });
+  $('#repeat-button').bind('click', function() { player.audioPlayer('toggleRepeat'); });
+});
+</script>
+
+</html>

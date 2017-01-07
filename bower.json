@@ -1,0 +1,32 @@
+{
+  "name": "jquery-audio-player",
+  "version": "1.0.0",
+  "description": "JQuery Plugin for Playing Audio Files",
+  "repository": {
+    "type": "git",
+    "url": "git://www.danieljach.net:GitServer/jquery-audio-player"
+  },
+  "author": {
+    "name": "Daniel Ach",
+    "email": "danieljach@gmail.com"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "audio",
+    "video",
+    "media",
+    "player",
+    "jplayer"
+  ],
+  "license": "MIT",
+  "main": "dist/jquery.audioPlayer.js",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.2"
+  }
+}

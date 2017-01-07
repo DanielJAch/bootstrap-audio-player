@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>JQuery Audio Player Example</title>
+  <meta name="viewport" content="width=device-width" />
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="../dist/css/jquery.audioPlayer.min.css" />
+  <link type="text/css" rel="stylesheet" media="screen" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+  <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="../dist/bin/jquery.audioPlayer.js"></script>
+  <script type="text/javascript" src="resources/tracks.js"></script>
+</head>
+
+<body>
+  <div id="audio-player"></div>
+</body>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  var player = $('#audio-player');
+  var options = {
+    compactMode: true
+  };
+
+  player.audioPlayer(options);
+  player.audioPlayer('setPlaylist', options, playlist);
+});
+</script>
+
+</html>
