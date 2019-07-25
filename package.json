@@ -7,7 +7,11 @@
     "url": "git@github.com:DanielJAch/bootstrap-audio-player.git"
   },
   "scripts": {
+    "watch": "webpack --watch",
     "build": "webpack --config ./build/webpack.dev.config.js",
+    "build-test": "webpack --config ./build/webpack.test.config.js",
+    "build-staging": "webpack --config ./build/webpack.staging.config.js",
+    "build-prod": "webpack --config ./build/webpack.prod.config.js",
     "clean": "rmdir /s /q node_modules",
     "reinstall": "npm run clean && npm install",
     "rebuild": "npm run clean && npm install && npm run build"
