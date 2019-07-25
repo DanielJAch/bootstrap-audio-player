@@ -61,19 +61,19 @@
     var setPlayerControlsEnabled = function() {
       if (!$.isArray(currentPlaylist) || currentPlaylist.length === 0) {
         self.find(
-            '.' + settings.buttonStyles.play + ', ' +
-            '.' + settings.buttonStyles.pause + ', ' +
-            '.' + settings.buttonStyles.backward + ', ' +
-            '.' + settings.buttonStyles.forward
-          )
+          '.' + settings.buttonStyles.play + ', ' +
+          '.' + settings.buttonStyles.pause + ', ' +
+          '.' + settings.buttonStyles.backward + ', ' +
+          '.' + settings.buttonStyles.forward
+        )
           .addClass('disabled');
       } else {
         self.find(
-            '.' + settings.buttonStyles.play + ', ' +
-            '.' + settings.buttonStyles.pause + ', ' +
-            '.' + settings.buttonStyles.backward + ', ' +
-            '.' + settings.buttonStyles.forward
-          )
+          '.' + settings.buttonStyles.play + ', ' +
+          '.' + settings.buttonStyles.pause + ', ' +
+          '.' + settings.buttonStyles.backward + ', ' +
+          '.' + settings.buttonStyles.forward
+        )
           .removeClass('disabled');
       }
     };
